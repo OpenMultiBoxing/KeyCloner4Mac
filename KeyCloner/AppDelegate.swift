@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // This is pretty hacky but I don't understand Cocoa and didn't want to take time to learn it.
         // Sets the ViewController as the first responder of the window so that it gets key events.
         ViewController.sharedController.view.window!.makeFirstResponder(ViewController.sharedController)
-        ViewController.sharedController.view.window!.level = Int(CGWindowLevelForKey(.maximumWindow))
+        ViewController.sharedController.view.window!.level = CGWindowLevelForKey(.maximumWindow)
         
         ViewController.sharedController.view.window!.title = "Key Cloner"
     }
